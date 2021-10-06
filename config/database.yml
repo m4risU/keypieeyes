@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  pool: 50
+  min_messages: warning
+
+development:
+  database: keypieeyes_development
+  username:
+  password:
+  <<: *common
+
+test:
+  database: keypieeyes_test
+  <<: *common
+
